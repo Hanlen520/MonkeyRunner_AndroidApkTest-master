@@ -1,4 +1,4 @@
-MonkeyRunner_AndroidAppTest                      
+               
 Python+MonkeyRunner 渠道包测试脚本程序 
 =============使用说明================= 
 1、将需要测试的Apk文件全部放在apk文件夹中 
