@@ -46,11 +46,12 @@ device = MonkeyRunner.waitForConnection()
 log.write("连接设备...\n")
 
 #卸载应用
-print('Removing...')
-device.removePackage(pakageName)
-print ('Remove Successful!')
-MonkeyRunner.sleep(2)
-log.write("初始化应用环境...\n")
+def uninstall():
+    print('Removing...')
+    device.removePackage(pakageName)
+    print ('Remove Successful!')
+    MonkeyRunner.sleep(2)
+    log.write("初始化应用环境...\n")
 countOK = 0
 countNO = 0
 
@@ -147,14 +148,17 @@ for i in os.listdir(dir):
             else:
                 print("个人中心比对失败 %s!" % i)
                 log.write("个人中心页比较失败！请检查安装包--%s--是否可用！\n" % i)
-                break
+                uninstall()
+                continue
         else:
             print("登录页比对失败 %s!" % i)
             log.write("登录页比较失败！请检查安装包--%s--是否可用！\n" % i)
-            break
+            uninstall()
+            continue
     else:
         print("False!Please check %s!"%i)
         log.write("启动页比较失败！请检查安装包--%s--是否可用！\n"%i)
-        break
+        uninstall()
+        continue
 
 log.write("共测试 %s 个货主渠道包，%d 个通过。"%(countPak,countOK))
