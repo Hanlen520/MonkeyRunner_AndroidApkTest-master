@@ -21,7 +21,7 @@ now = time.strftime("%Y-%m-%d-%H-%M")
 name=sys.argv[0].split("\\")
 filename=name[len(name)-1]
 
-#MonkeyRunner下获取运行的文件所在的路径
+#MonkeyRunner下获取运行的文件所在的路径。
 rootpath  = os.path.split(os.path.realpath(sys.argv[0]))[0]
 print(rootpath)
 
