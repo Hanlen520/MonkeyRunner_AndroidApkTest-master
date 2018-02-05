@@ -1,10 +1,10 @@
-MonkeyRunner_ApkTest
+MonkeyRunner_AndroidAppTest
 ====================
 
 Python+MonkeyRunner 渠道包测试脚本程序
 =======使用说明=======：
 1、将需要测试的Apk文件全部放在apk文件夹中
-2、将基线图放在screenShot文件夹中，基线图命名为basePic.png即可
+2、将基线图放在screenShot文件夹中，按照自己的功能需求命名基线图
 3、将手机通过数据线连接上电脑
 4、运行Start.bat即可开始测试，测试结果保存在log文件夹中
 
@@ -19,7 +19,6 @@ Python+MonkeyRunner 渠道包测试脚本程序
 =======测其他应用时，需要更改的参数=======：
   应用包名：pakageName；
   入口Activity名：componentName；
-这两个参数可以通过在手机安装 "/辅助应用/FindtheActivity.apk" 查看到。
 
 
 =======工具原理=======：
